@@ -69,3 +69,24 @@ a{
     border-radius: 10px;
     padding: 10px;
 }
+
+@media (max-width:1024px) {
+    .container{
+        width: 90%;
+    }    
+    .tscan{
+        width: 90%;
+    }
+    img{
+        width: 250px;
+    }
+    #btn{
+        transform: translateX(0);
+    }
+    h2{
+        font-size: 25px;
+    }
+    .item{
+        width: 100%;
+    }
+}
