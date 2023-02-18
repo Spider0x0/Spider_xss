@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xss Sider Js </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="hero">
+        <div class="container">
+            <h2 class="title">Xss (Cross Site Scripting)</h2>
+            <p>XSS stands for Cross-Site Scripting. It is a type of security vulnerability that allows an attacker to inject malicious scripts into a web page viewed by other users. The injected script can be used to steal sensitive information, such as login credentials or cookies, from the user or to perform actions on behalf of the user, such as transferring money or posting malicious content.XSS attacks can occur when a web application doesn't properly validate or sanitize user inputs, such as form data or query parameters. An attacker can then insert malicious scripts into the input, which are then executed by the victim's browser when they view the resulting page.
+            There are several types of XSS attacks,
+            including stored XSS, reflected XSS, and DOM-based XSS. 
+            It is important for web developers to take steps to prevent XSS vulnerabilities,
+            such as input validation and output encoding.</p>
+            <h2>Reflected Xss :</h2>
+            <p>
+                Reflected XSS (Cross-Site Scripting) is a type of security vulnerability where an attacker injects malicious code into a web application that is then reflected back to the user's browser. This can happen when the application doesn't properly validate or sanitize user input, such as search queries or URL parameters.
+                When the user enters a search query or clicks on a link that contains the malicious code, the code is executed by the user's browser, which can then steal sensitive information or perform actions on behalf of the user. The attacker can use various techniques to trick the user into executing the malicious code, such as disguising the code as part of a legitimate URL or search query.
+                To prevent Reflected XSS attacks, web developers should validate and sanitize all user input to ensure that it doesn't contain any malicious code. Input validation should be performed on both the client and server sides of the application, and any errors should be properly handled to prevent the application from reflecting the malicious input back to the user.
+                Web developers should also use output encoding to prevent any user input that does contain malicious code from being executed by the user's browser. This involves encoding all user-generated content that is displayed on the web page, such as search results or user comments, to prevent any malicious code from being executed.
+            </p>
+            <h2>Stored Xss : </h2>
+            <p>
+                Stored XSS (Cross-Site Scripting) is a type of security vulnerability where an attacker injects malicious code into a web application that is then stored on the server and later retrieved and displayed to other users. This can happen when the application doesn't properly validate or sanitize user input, such as comments or form data.
+                When the user accesses the web page that contains the stored malicious code, the code is executed by the user's browser, which can then steal sensitive information or perform actions on behalf of the user. The attacker can use various techniques to store the malicious code, such as submitting a malicious comment or form data that is then stored on the server and displayed to other users.
+                To prevent Stored XSS attacks, web developers should validate and sanitize all user input to ensure that it doesn't contain any malicious code. Input validation should be performed on both the client and server sides of the application, and any errors should be properly handled to prevent the application from storing the malicious input.
+                Web developers should also use output encoding to prevent any user-generated content that is displayed on the web page from containing malicious code. This involves encoding all user-generated content, such as comments or form data, to prevent any malicious code from being executed. Additionally, web developers should implement security measures, such as Content Security Policy (CSP), to prevent the execution of any inline scripts that may be injected into the web page by an attacker.
+            </p>
+            <h2>Dom Xss :</h2>
+            <p>DOM-based XSS (Cross-Site Scripting) is a type of security vulnerability where an attacker injects malicious code into a web application that is then executed by the user's browser in the Document Object Model (DOM). Unlike Reflected and Stored XSS, the malicious code is not reflected or stored on the server. Instead, it is executed directly in the user's browser through manipulation of the DOM.
+                This can happen when the application doesn't properly validate or sanitize user input, such as search queries or URL parameters, which are then used to dynamically create HTML content that is inserted into the DOM. The attacker can manipulate the DOM by injecting a script into the input, which is then executed by the user's browser when the content is rendered in the DOM.
+                To prevent DOM-based XSS attacks, web developers should validate and sanitize all user input to ensure that it doesn't contain any malicious code. Input validation should be performed on both the client and server sides of the application, and any errors should be properly handled to prevent the application from executing the malicious input.
+                Web developers should also use output encoding to prevent any user-generated content that is displayed on the web page from containing malicious code. This involves encoding all user-generated content, such as search results or user comments, to prevent any malicious code from being executed. Additionally, web developers should avoid using the JavaScript function "eval" or any other methods that allow user input to be directly executed as code in the browser, as this can increase the risk of DOM-based XSS vulnerabilities.</p>
+        </div>
+        <div class="list">
+            <div class="container">
+                <h2 class="title2">Payload List </h2>
+                <div class="item">
+                    <img src="ray-so-export(1).png">
+                    <p id="myParagraph" onclick="copyText()"></p>
+                    <button id="btn" onclick="copyText()">Copy Payload</button>
+                    <h2>What is Script Tag in Html ?</h2>
+                    <p> in HTML, the `script` tag is used to define a client-side script, such as JavaScript, that can be executed in the user's browser.
+                        The `script` tag can be included in the HTML code of a web page to add functionality or interactivity to the page. When the user's browser encounters the `script`
+                        tag, it loads and executes the JavaScript code contained within the tag. The JavaScript code can manipulate the HTML and CSS of the web page, respond to user events such as mouse clicks or keyboard presses, and communicate with web servers to retrieve or send data.
+                    </p>
+                    <h2>What is Alert in JavaScript ?</h2>
+                    <p>In JavaScript, alert() is a built-in function that displays a pop-up message box containing a specified message and an OK button. The message can be a string, a number, or a combination of both.
+                        The alert() function is often used for simple debugging purposes or to provide feedback to the user. It can be used to display a message when a certain action is performed, or to warn the user of potential errors or problems.</p>
+                </div>
+            </div>
+        </div>
+        <div class="tscan">
+            <h2 style="margin: 70px 0px;">The Best Tool To Scan : </h2>
+            <div class="item0">
+                <a target="_blank" href="https://github.com/s0md3v/XSStrike">XSStrike</a>
+                <p>XSStrike is a tool used in penetration testing to detect Cross-Site Scripting (XSS) vulnerabilities in web applications. 
+                    XSStrike sends payload messages to the targeted web application and analyzes 
+                    the response to detect any signs of XSS vulnerabilities. 
+                    XSStrike includes features such as the ability to crawl 
+                    a website to discover all of its pages and inputs, as well as the 
+                    ability to perform automated testing and save and load test sessions. 
+                    Overall, XSStrike is a powerful tool for detecting and exploiting XSS 
+                    vulnerabilities in web applications, and should be used for ethical purposes 
+                    and with the permission of the website owner.</p>
+            </div>
+            <h2>The Best website to practise in Labs :</h2>
+            <p><a target="_blank" href="https://portswigger.net/">PortSwigger</a> Web Security Academy - This free online platform provides a range of interactive labs and challenges focused on web security, including XSS vulnerabilities.</p>
+            <p><a target="_blank" href="https://google-gruyere.appspot.com/">Google-gruyere</a> - This web application was developed by Google to provide a safe and legal environment for developers to learn about web security vulnerabilities, including XSS.</p>
+            <p><a target="_blank" href="https://www.hackthissite.org/">HackThisSite</a>- This website offers a range of challenges and labs designed to teach visitors about web security, including XSS vulnerabilities.</p>
+            <p><a target="_blank" href="https://www.kali.org/tools/dvwa/">DVWA</a> (Damn Vulnerable Web Application) - This is a purposely vulnerable web application designed to help developers learn about web security vulnerabilities, including XSS.</p>
+            <div>
+                <h2>How to close xss ?</h2>
+                <p>   (1) Input validation: Ensure that all user input is validated on the server side before it is processed or displayed. This can include validating the type and format of input, as well as checking for any malicious characters or scripts.
+
+                    <br><br>(2) Output encoding: All user input that is displayed on a web page should be encoded properly to prevent it from being interpreted as code. This can be done using encoding techniques such as HTML entity encoding or JavaScript escaping.
+                
+                    <br><br>(3) Content Security Policy (CSP): Implement a CSP on your website or application to restrict the sources of content that can be loaded on your pages, helping to prevent the execution of malicious scripts.
+                
+                    <br><br>(4) Use HTTPS: Use HTTPS to encrypt all communication between the user's browser and your server, preventing attackers from intercepting and manipulating user input.
+                
+                    <br><br>(5) Keep software up-to-date: Ensure that all software, including web servers, databases, and applications, is kept up-to-date with the latest security patches to prevent known vulnerabilities from being exploited.</p>
+            </div>
+            <div class="me">
+                <h2>Developed By Youssef Waleed (Spider Js)</h2>
+                <a target="_blank" href="https://www.instagram.com/youssef_waleed_232/">Instagram Link</a>
+            </div>
+        </div>
+    </div>
+    <script src="main.js">
+    </script>
+</body>
+</html>
